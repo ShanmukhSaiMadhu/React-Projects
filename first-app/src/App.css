@@ -1,95 +1,126 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
 * {
   box-sizing: border-box;
 }
 
-body {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: white;
 }
 
-.App {
-  width: 600px;
-  height: 500px;
-  margin: auto;
-  background-color: #282D35;
+body {
+  margin: 0;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* NAV styles */
 
 nav {
   display: flex;
   align-items: center;
-  background-color: #21222A;
-  height: 90px;
+  background-color: #ffffff;
   padding: 30px 25px;
+  height: 60px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
 }
 
-.nav-logo-text, .nav-title {
-  margin: 0;
+nav.dark {
+  background-color: #21222A;
 }
 
-.nav-logo-text {
-  margin-right: auto;
+.nav-logo_icon {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.nav-logo_text {
   color: #61DAFB;
-  font-weight: 700;
-  font-size: 22px;
-}
-
-.nav-logo {
-  width: 40px;
-  height: 30px;
-  /* margin-right: px; */
+  margin-right: auto;
 }
 
 .nav-title {
-  color: #fff;
+  color: #DEEBF8;
+}
+
+.toggler {
+  display: flex;
+  align-items: center;
+}
+
+.toggler p {
+  font-size: 0.625rem;
   font-weight: 600;
 }
 
+.toggler-slider {
+  width: 25px;
+  height: 13px;
+  background-color: #2B283A;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: content-box;
+}
+
+nav.dark .toggler-slider {
+  border-color: white;
+  background-color: #F5F5F5;
+}
+
+.toggler-slider-circle {
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+nav.dark .toggler-slider-circle {
+  background-color: black;
+}
+
+.toggler-light {
+  color: #2B283A;
+}
+
+nav.dark .toggler-light {
+  color: #918E9B;
+}
+
+.toggler-dark {
+  color: #D5D4D8;
+}
+
+nav.dark .toggler-dark {
+  color: #FFFFFF;
+}
+
+nav.dark .toggler-slider {
+  justify-content: flex-end;
+}
+
+/* MAIN styles */
 main {
-  color: #fff;
   padding: 57px 27px;
-  background-image: url(./reactjs-icon\ 2.png);
-  background-position: right;
+  background-image: url(""); 
   background-repeat: no-repeat;
+  background-position: right center;
+  flex: 1 1 auto;
+  background-color: white;
+  color: #2B283A;
+}
+
+main.dark {
+  background-image: url(""); 
+  background-color: #282D35;
+  color: white;    
 }
 
 .main-title {
@@ -100,7 +131,7 @@ main {
 
 .main-facts {
   margin-top: 46px;
-  min-width: 400px;
+  max-width: 400px;
 }
 
 .main-facts > li {
@@ -109,73 +140,6 @@ main {
 }
 
 .main-facts > li::marker {
-  color: #61DAFB;
   font-size: 1.4rem;
-}
-
-/* .App {
-  position: relative;
-  width: 550px;
-  height: 550px;
-
-  background: #fff;
-}
-
-header {
-  position: absolute;
-  width: 550px;
-  height: 91px;
-  left: 0px;
-  top: 0px;
-  background-color: #21222A;
-}
-
-.title {
-  position: absolute;
-  width: 158px;
-  height: 29px;
-  left: 26px;
-  top: 31px;
-}
-
-.logo {
-  position: absolute;
-  width: 29px;
-  height: 29px;
-  left: 26px;
-  top: 31px;
-}
-
-.text {
-  position: absolute;
-  width: 123px;
-  height: 23px;
-  left: 62px;
-  top: 31px;
-
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 23px;
-  line-height: 27px;
-  letter-spacing: -0.05em;
-
   color: #61DAFB;
 }
-
-.extra-title {
-  position: absolute;
-  width: 259px;
-  height: 21px;
-  left: 264px;
-  top: 38px;
-
-  font-family: 'Inter', serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: right;
-
-  color: #DEEBF8;
-} */
